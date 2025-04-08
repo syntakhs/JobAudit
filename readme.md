@@ -21,7 +21,7 @@ Or download the ZIP and extract it into a folder.
 Open the `popup.js` file and find the line:
 
 ```js
-"Authorization": "Bearer YOUR_API_KEY_HERE"
+"Authorization": "Bearer YOUR-API-KEY"
 ```
 
 Replace `"YOUR-API-KEY"` with your actual DeepSeek API Key.

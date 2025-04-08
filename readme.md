@@ -24,7 +24,7 @@ Open the `popup.js` file and find the line:
 "Authorization": "Bearer YOUR_API_KEY_HERE"
 ```
 
-Replace `"YOUR_API_KEY_HERE"` with your actual DeepSeek or OpenRouter API key.
+Replace `"YOUR-API-KEY"` with your actual DeepSeek API Key.
 
 > **Note:** This key is exposed in the extension files. For production or public distribution, it’s strongly recommended to use a backend proxy to securely handle the API key.
 

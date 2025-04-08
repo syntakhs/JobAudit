@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Audit AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Job Audit</h1>
+      <button id="analyzeBtn">Analyze Job</button>
+
+      <div class="trust-level">
+        <label>Trust Level:</label>
+        <div class="bar-bg">
+          <div id="bar-fill" class="bar-fill"></div>
+        </div>
+        <span id="trust-label">Unknown</span>
+      </div>
+
+      <div id="red-flags" class="red-flags">
+        <h3>Potential Red Flags</h3>
+        <ul id="flags-list"></ul>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

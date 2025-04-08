@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Job Audit AI",
+  "version": "1.0",
+  "description": "Analyze job postings for red flags using AI.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "*://*.indeed.com/*",
+    "*://*.linkedin.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.indeed.com/*", "*://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

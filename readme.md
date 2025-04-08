@@ -9,7 +9,7 @@ A modern Chrome extension that analyzes job postings on sites like **LinkedIn** 
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/yourusername/job-audit-ai.git
+git clone https://github.com/syntakhs/job-audit-ai.git
 ```
 
 Or download the ZIP and extract it into a folder.

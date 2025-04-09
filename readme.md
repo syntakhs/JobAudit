@@ -16,21 +16,7 @@ Or download the ZIP and extract it into a folder.
 
 ---
 
-### 2. 🔑 Add Your API Key
-
-Open the `popup.js` file and find the line:
-
-```js
-"Authorization": "Bearer YOUR-API-KEY"
-```
-
-Replace `"YOUR-API-KEY"` with your actual DeepSeek API Key.
-
-> **Note:** This key is exposed in the extension files. For production or public distribution, it’s strongly recommended to use a backend proxy to securely handle the API key.
-
----
-
-### 3. 🚀 Load the Extension into Chrome
+### 2. 🚀 Load the Extension into Chrome
 
 1. Go to `chrome://extensions`
 2. Enable **Developer mode** (top right)
@@ -39,7 +25,7 @@ Replace `"YOUR-API-KEY"` with your actual DeepSeek API Key.
 
 ---
 
-### 4. ✅ Usage
+### 3. ✅ Usage
 
 1. Navigate to a job listing on **LinkedIn** or **Indeed**
 2. Click the **Job Audit AI** extension icon

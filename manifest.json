@@ -6,7 +6,20 @@
   "permissions": ["scripting", "activeTab", "storage"],
   "host_permissions": [
     "*://*.indeed.com/*",
-    "*://*.linkedin.com/*"
+    "*://*.linkedin.com/*",
+    "*://*.glassdoor.com/*",
+    "*://*.monster.com/*",
+    "*://*.naukri.com/*",
+    "*://*.ziprecruiter.com/*",
+    "*://*.myworkdayjobs.com/*",
+    "*://jobs.lever.co/*",
+    "*://boards.greenhouse.io/*",
+    "*://*.wellfound.com/*",
+    "*://*.angel.co/*",
+    "*://*.hired.com/*",
+    "*://*.remoteok.com/*",
+    "*://*.jobstreet.com/*",
+    "*://*.x.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -19,7 +32,23 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.indeed.com/*", "*://*.linkedin.com/*"],
+      "matches": [
+        "*://*.indeed.com/*",
+        "*://*.linkedin.com/*",
+        "*://*.glassdoor.com/*",
+        "*://*.monster.com/*",
+        "*://*.naukri.com/*",
+        "*://*.ziprecruiter.com/*",
+        "*://*.myworkdayjobs.com/*",
+        "*://jobs.lever.co/*",
+        "*://boards.greenhouse.io/*",
+        "*://*.wellfound.com/*",
+        "*://*.angel.co/*",
+        "*://*.hired.com/*",
+        "*://*.remoteok.com/*",
+        "*://*.jobstreet.com/*",
+        "*://*.x.com/*"
+      ],
       "js": ["content.js"]
     }
   ]

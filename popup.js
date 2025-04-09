@@ -18,14 +18,12 @@ document.getElementById("analyzeBtn").addEventListener("click", () => {
     barFill.style.width = "0%";
     barFill.style.backgroundColor = "#ccc";
   
-    fetch("https://api.deepseek.com/v1/chat/completions", {
+    fetch("https://api.syntakhs.com/analyze", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer YOUR-API-KEY"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "deepseek-chat",
         messages: [
           {
             role: "system",
@@ -38,11 +36,12 @@ document.getElementById("analyzeBtn").addEventListener("click", () => {
         ]
       })
     })
+    
       .then(res => res.json())
       .then(data => {
         const content = data.choices[0].message.content;
   
-        // Extracting trust level from response
+        // Extract trust level from response
         let trust = "Unknown";
         if (/Trust Level:?\s*High/i.test(content)) {
           trust = "High";

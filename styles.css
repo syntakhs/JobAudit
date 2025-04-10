@@ -1,92 +1,99 @@
 body {
-    font-family: "Segoe UI", sans-serif;
-    width: 300px;
-    margin: 0;
-    padding: 10px;
-    background: #f8f9fa;
-  }
-  
-  .container {
-    padding: 12px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    position: relative;
-  }
-  
-  h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 12px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .trust-level {
-    margin-bottom: 10px;
-  }
-  
-  .bar-bg {
-    height: 12px;
-    background: #ddd;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-top: 4px;
-  }
-  
-  .bar-fill {
-    height: 100%;
-    background: #4caf50;
-    width: 0%;
-    transition: width 0.3s;
-  }
-  
-  #trust-label {
-    display: block;
-    font-size: 12px;
-    margin-top: 4px;
-  }
-  
-  .red-flags {
-    margin-top: 10px;
-  }
-  
-  .red-flags h3 {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-  
-  #flags-list {
-    padding-left: 18px;
-    font-size: 13px;
-    color: #d32f2f;
-  }
-  
-  #flags-list li {
-    color: #b71c1c;
-    margin-bottom: 6px;
-    font-size: 13px;
-    line-height: 1.4;
-  }
-/* Headings (already bold + uppercase via content) */
-#flags-list li strong:first-of-type {
-  color: #b30000; /* red for headings */
+  font-family: "Segoe UI", sans-serif;
+  width: 360px;
+  margin: 0;
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
-/* Bold phrases within the description */
+.container {
+  padding: 16px;
+  background-color: #2c2c2c;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+button {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5bc65b, #4caf50);
+  transform: translateY(-1px);
+}
+
+.trust-level {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.bar-bg {
+  height: 12px;
+  background: #444;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+#trust-label {
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ccc;
+}
+
+.red-flags {
+  margin-top: 14px;
+}
+
+.red-flags h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #ffbaba;
+}
+
+#flags-list {
+  padding-left: 18px;
+  font-size: 14px;
+  color: #ffcdd2;
+}
+
+#flags-list li {
+  color: #f28b82;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Red flag headings */
+#flags-list li strong:first-of-type {
+  color: #ff5252;
+}
+
+/* Bold inside sentences */
 #flags-list li strong:not(:first-of-type) {
-  color: #350101; /* deep blue or any accent color you prefer */
+  color: #ff8a80;
   font-weight: 600;
 }

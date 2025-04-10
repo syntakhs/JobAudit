@@ -1,14 +1,35 @@
-document.getElementById("analyzeBtn").addEventListener("click", () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(
-      tabs[0].id,
-      { action: "getJobText" },
-      (response) => {
-        if (response && response.jobText) {
-          analyzeJobText(response.jobText);
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("analyzeBtn").addEventListener("click", () => {
+    chrome.windows.getAll({ populate: true }, (windows) => {
+      for (const win of windows) {
+        const activeTab = win.tabs.find(
+          (t) => t.active && !t.url.startsWith("chrome-extension://")
+        );
+        if (activeTab) {
+          chrome.tabs.sendMessage(
+            activeTab.id,
+            { action: "getJobText" },
+            (response) => {
+              if (chrome.runtime.lastError) {
+                console.error(chrome.runtime.lastError.message);
+                alert(
+                  "Unable to communicate with the page. Try refreshing the tab."
+                );
+                return;
+              }
+
+              if (response && response.jobText) {
+                analyzeJobText(response.jobText);
+              } else {
+                alert("No job text found or content script not injected.");
+              }
+            }
+          );
+          return;
         }
       }
-    );
+      alert("No suitable active tab found.");
+    });
   });
 });
 

@@ -80,3 +80,13 @@ body {
     font-size: 13px;
     line-height: 1.4;
   }
+/* Headings (already bold + uppercase via content) */
+#flags-list li strong:first-of-type {
+  color: #b30000; /* red for headings */
+}
+
+/* Bold phrases within the description */
+#flags-list li strong:not(:first-of-type) {
+  color: #350101; /* deep blue or any accent color you prefer */
+  font-weight: 600;
+}
